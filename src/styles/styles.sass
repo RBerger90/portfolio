@@ -1,0 +1,85 @@
+$black : #343434
+$blacker : #151414FF
+$blue : #2F3061
+$red : #B42B18
+$darkred : #611207
+$yellow : #F1DA7E
+$white : #F7FFF7
+
+@font-face
+    font-family: 'dosisextralight'
+    src: url('./fonts/dosis-variablefont_wght-webfont.woff2') format('woff2')
+    src: url('./fonts/dosis-variablefont_wght-webfont.woff') format('woff')
+    font-weight: normal
+    font-style: normal
+
+
+
+@font-face
+    font-family: 'josefin_sansthin'
+    src: url('./fonts/josefinsans-variablefont_wght-webfont.woff2') format('woff2')
+    src: url('./fonts/josefinsans-variablefont_wght-webfont.woff') format('woff')
+    font-weight: normal
+    font-style: normal
+
+
+body
+    background: $blacker  /* fallback for old browsers */
+    background: -webkit-linear-gradient(200deg, $blue, $darkred)  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(200deg, $blue, $darkred) /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin: 0
+    color: $white
+
+    #menu-btn
+        width: 35px
+        height: 30px
+        display: flex
+        position: fixed
+        top: 20px
+        right: 20px
+        flex-direction: column
+        justify-content: space-between
+
+
+        &:hover
+            cursor: pointer
+
+
+        div
+            position: relative
+            background: $white
+            width: 35px
+            height: 5px
+            transition-duration: 1s
+
+            &#fbar-menu.menu-open
+                rotate: 45deg
+                scale: 0.5 1
+                translate: 12px 7px
+                transition-duration: 1s
+
+            &#lbar-menu.menu-open
+                rotate: -45deg
+                scale: 0.5 1
+                translate: 12px -7px
+                transition-duration: 1s
+
+    #name
+        font-family: serif
+        font-weight: bold
+        font-size: 180px
+
+    #p1
+        font-family: serif
+        font-weight: bold
+        font-size: 18px
+
+    #p2
+        font-family: 'dosisextralight', serif
+        font-weight: bold
+        font-size: 18px
+
+    #p3
+        font-family: 'josefin_sansthin', serif
+        font-weight: bold
+        font-size: 18px
